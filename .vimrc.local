@@ -1,0 +1,75 @@
+" Misc
+
+set nospell
+noremap <leader>qq :qall<cr>
+noremap <leader>wq :wqall<cr>
+noremap <leader>% :so %<cr>
+
+" Find commands
+vnoremap <leader>find "hy:lvimgrep /<C-r>h/j ** <Bar> lw<left><left><left><left><left><left><left>
+nnoremap <leader>find :execute "lvimgrep /" . expand("<cword>") . "/j **" <Bar> lw<left><left><left><left><left><left><left><left>
+
+" Toggle highlight search
+nnoremap <leader>h :set hlsearch!<CR>
+
+" Easier moving in tabs and windows
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
+map <C-H> <C-W>h
+
+
+" Syntastic Customizations
+noremap <leader>ch :SyntasticCheck<cr>
+let g:syntastic_aggregate_errors = 0
+" Pasive by Default
+let g:syntastic_mode_map = { "mode": "passive", "active_filetypes": [], "passive_filetypes": [] }
+" Javascript
+let g:syntastic_javascript_checkers=["jshint"]
+let g:syntastic_javascript_jshint_conf = '.jshintrc'
+
+
+" NERDTree Customizations
+nmap <expr> <leader>1 exists("b:NERDTreeType") ? ':NERDTreeToggle<cr>' : ':NERDTreeFocus<cr>'
+nmap <expr> <leader>2 exists("b:NERDTreeType") ? ':NERDTreeToggle<cr>' : ':NERDTreeFind<cr>'
+
+" Other Sessions Commands
+" map <leader>so :OpenSession!<cr>
+
+" Vim-Session (with vim-misc): Extended session management for Vim
+" let g:session_autosave = 'no'
+" let g:session_autoload = 'no'
+
+
+" Theme
+set t_Co=256
+if has('gui_running')
+    " --------------------------------------------------------
+    " Font
+    "
+    " set guifont=Monaco
+    " --------------------------------------------------------
+    " Theme
+    "
+    colorscheme Tomorrow-Night-Bright
+    " --------------------------------------------------------
+    " Remove Toobar in gui
+    "
+    " set guioptions-=T
+    " --------------------------------------------------------
+    " Remove menu bar in gui
+    "
+    " set guioptions-=m
+    " --------------------------------------------------------
+    "  Add tab pages
+    "
+    " set guioptions+=e
+    " --------------------------------------------------------
+    "  GUI tab label
+    "
+    " set guitablabel=%M\ %t
+else
+    " set background=light
+    " colorscheme desert256
+endif
+
