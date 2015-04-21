@@ -31,6 +31,9 @@ call vundle#begin()
     Plugin 'scrooloose/nerdtree'
     Plugin 'vim-scripts/DoxygenToolkit.vim'
 
+    Plugin 'othree/html5.vim'
+    " Plugin 'vim-scripts/php.vim-html-enhanced'
+
     Plugin 'scrooloose/syntastic'
 
     " TODO: explorar este plugin y sus prestaciones
@@ -408,7 +411,8 @@ if has('gui_running')
     "
     " set guitablabel=%M\ %t
 else
-    set background=light
-    colorscheme desert256
+    set background=dark
+    "colorscheme desert256
+    colorscheme Tomorrow-Night-Bright
 endif
 
