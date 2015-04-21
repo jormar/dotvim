@@ -1,8 +1,9 @@
 " Misc
-
 set nospell
-noremap <leader>qq :qall<cr>
-noremap <leader>wq :wqall<cr>
+noremap <leader>q :qall<cr>
+noremap <leader>w :w<cr>
+noremap <leader>aq :qall<cr>
+noremap <leader>aw :wqall<cr>
 noremap <leader>% :so %<cr>
 
 " Find commands
@@ -18,7 +19,6 @@ map <C-K> <C-W>k
 map <C-L> <C-W>l
 map <C-H> <C-W>h
 
-
 " Syntastic Customizations
 noremap <leader>ch :SyntasticCheck<cr>
 let g:syntastic_aggregate_errors = 0
@@ -32,13 +32,25 @@ let g:syntastic_javascript_jshint_conf = '.jshintrc'
 " NERDTree Customizations
 nmap <expr> <leader>1 exists("b:NERDTreeType") ? ':NERDTreeToggle<cr>' : ':NERDTreeFocus<cr>'
 nmap <expr> <leader>2 exists("b:NERDTreeType") ? ':NERDTreeToggle<cr>' : ':NERDTreeFind<cr>'
+let NERDTreeQuitOnOpen=0
 
 " Other Sessions Commands
-" map <leader>so :OpenSession!<cr>
+nunmap <leader>sl
+nunmap <leader>ss
+nunmap <leader>sc
+map <leader>so :OpenSession!<cr>
+map <leader>ss :SaveSession<cr>
 
 " Vim-Session (with vim-misc): Extended session management for Vim
-" let g:session_autosave = 'no'
-" let g:session_autoload = 'no'
+let g:session_autosave = 'no'
+let g:session_autoload = 'no'
+
+" Session options
+set ssop-=blank
+set ssop-=options
+set ssop+=resize
+set ssop+=winpos
+set ssop-=localoptions
 
 
 " Theme
