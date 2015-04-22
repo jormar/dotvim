@@ -1,6 +1,6 @@
 " Misc
 set nospell
-noremap <leader>q :qall<cr>
+noremap <leader>q :q<cr>
 noremap <leader>w :w<cr>
 noremap <leader>aq :qall<cr>
 noremap <leader>aw :wqall<cr>
@@ -46,11 +46,13 @@ let g:session_autosave = 'no'
 let g:session_autoload = 'no'
 
 " Session options
+set sessionoptions=blank,curdir,folds,tabpages,winsize
 set ssop-=blank
 set ssop-=options
 set ssop+=resize
 set ssop+=winpos
 set ssop-=localoptions
+set ssop-=buffers
 
 
 " Theme
