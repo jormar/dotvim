@@ -3,7 +3,7 @@ set nospell
 noremap <leader>q :q<cr>
 noremap <leader>w :w<cr>
 noremap <leader>aq :qall<cr>
-noremap <leader>aw :wqall<cr>
+noremap <leader>aw :wall<cr>
 noremap <leader>% :so %<cr>
 
 " Find commands
@@ -53,6 +53,10 @@ set ssop+=resize
 set ssop+=winpos
 set ssop-=localoptions
 set ssop-=buffers
+
+" DoxygenToolkit
+let g:DoxygenToolkit_briefTag_pre=""
+let g:DoxygenToolkit_paramTag_pre="@param String "
 
 
 " Theme
