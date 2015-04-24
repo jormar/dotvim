@@ -5,6 +5,7 @@ noremap <leader>w :w<cr>
 noremap <leader>aq :qall<cr>
 noremap <leader>aw :wqall<cr>
 noremap <leader>% :so %<cr>
+set nofoldenable
 
 " Find commands
 vnoremap <leader>find "hy:lvimgrep /<C-r>h/j ** <Bar> lw<left><left><left><left><left><left><left>
@@ -56,16 +57,18 @@ set ssop-=buffers
 
 
 " Theme
-set t_Co=256
+" set t_Co=256
 if has('gui_running')
     " --------------------------------------------------------
     " Font
     "
-    " set guifont=Monaco
+    set guifont=Liberation\ Mono\ for\ Powerline\ 10
     " --------------------------------------------------------
     " Theme
     "
-    colorscheme Tomorrow-Night-Bright
+    " colorscheme Tomorrow-Night-Bright
+    set background=light
+    " colorscheme solarized
     " --------------------------------------------------------
     " Remove Toobar in gui
     "
@@ -83,7 +86,9 @@ if has('gui_running')
     "
     " set guitablabel=%M\ %t
 else
+    let g:solarized_termcolors=256
     " set background=light
     " colorscheme desert256
+    colorscheme solarized
 endif
 
