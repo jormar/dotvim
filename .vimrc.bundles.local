@@ -1,4 +1,3 @@
-
 Bundle 'moll/vim-node'
 Bundle 'node.js'
 Bundle 'mattn/emmet-vim'
@@ -8,3 +7,4 @@ Bundle 'xolox/vim-session'
 Bundle 'vim-scripts/DoxygenToolkit.vim'
 Bundle 'brookhong/DBGPavim'
 Bundle 'chriskempson/vim-tomorrow-theme'
+Bundle 'editorconfig/editorconfig-vim'
