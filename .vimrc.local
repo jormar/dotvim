@@ -1,9 +1,9 @@
 " Misc
 set nospell
-noremap <leader>q :q<cr>
-noremap <leader>w :w<cr>
-noremap <leader>aq :qall<cr>
-noremap <leader>aw :wall<cr>
+"noremap <leader>q :q<cr>
+"noremap <leader>w :w<cr>
+noremap <leader>qq :qall<cr>
+noremap <leader>ww :wall<cr>
 noremap <leader>% :so %<cr>
 set nofoldenable
 
