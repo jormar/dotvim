@@ -9,3 +9,4 @@ let g:spf13_no_conceal = 1
 let g:spf13_leader=' '
 let g:spf13_no_easyWindows = 1
 let g:spf13_no_big_font=1
+let g:spf13_keep_trailing_whitespace = 1
