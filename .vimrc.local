@@ -11,6 +11,12 @@ set nofoldenable
 vnoremap <leader>find "hy:lvimgrep /<C-r>h/j ** <Bar> lw<left><left><left><left><left><left><left>
 nnoremap <leader>find :execute "lvimgrep /" . expand("<cword>") . "/j **" <Bar> lw<left><left><left><left><left><left><left><left>
 
+" Replace commands
+vnoremap <leader>:s "hy:%s/<C-r>h//Igc<left><left><left><left>
+vnoremap <leader>:S "hy:%s/<C-r>h//Igc<left><left><left><left>
+nnoremap <leader>:s viw"hy:%s/<C-r>h//Igc<left><left><left><left>
+nnoremap <leader>:S viw"hy:%s/<C-r>h//Igc<left><left><left><left>
+
 " Toggle highlight search
 nnoremap <leader>h :set hlsearch!<CR>
 
